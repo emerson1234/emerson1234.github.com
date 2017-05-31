@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Login</title>
+	<title>GERENCIAR POSTAGENS</title>
 	<meta charset="utf-8">
 	 <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -24,12 +24,16 @@ body{
 			background-color: #3366cc;
 			color: black;
 		}
+	.postagens{
 		
-		.Estilo{
-			 border-style: solid;
-			 background-color: white;
-		}
+	}
 
+	.Postagem2{
+		background-color: white;
+		border:3px solid black;
+		border-radius: 13px;
+	}	
+		
 
 </style>
 
@@ -40,51 +44,59 @@ body{
      <div class="navbar-header">
       </div>
         <ul class="nav navbar-nav">
-        <li class="active"><a href="#" >MIMIMI</a></li>
-        <li><a href="../index.html#">Início</a></li>
-        <li><a href="../index.html#sobre">Sobre</a></li>
-        <li><a href="../index.html#equipe">Equipe</a></li>
-        <li><a href="../index.html#contato">Contato</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li class="active"><a href="#">Entrar</a></li>
+        <li><a href="#" >MIMIMI</a></li>
+        <li class="active"><a href="Atualizar Conta.html">EMERSON ALMEIDA</a></li>
+        <li><a href="login.html">SAIR</a></li>
      </ul>
    </div>
  </nav>
 
+<button type="button" class="btn btn-primary btn-lg ">Gerenciar Postagens</button>
+<a href="novapostagem.html"><button type="button" class="btn btn-primary btn-lg ">Nova Postagem</button></a>
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-<!--contato-->
-</div>
-<div class="container">
-  <div class="row">
-  			
-  	<div class="col-md-4 col-md-offset-4 formulario Estilo">
-  			<h3>IDENTIFIQUE-SE</h3>
-	  <form>
-	    <div class="form-group">
-	      <label for="email" class="texto-branco">E-mail:</label>
-	      <br>
-	      <input type="email" class="form-control" id="email" placeholder="email" name="email">
-	    </div>
-	    <div class="form-group">
-	      <label for="pwd" class="texto-branco">Senha:</label>
-	      <br>
-	      <input type="password" class="form-control" id="pwd" placeholder="senha" name="usr">
 
-	    </div>
 	
-	    <br>
-	   <a href="gerenciamento.html"> <button type="button" class="btn btn-primary btn-lg center-block">Entrar</button></a>
-	  <br>
-	  <br>
-	  </form>
-  	</div>
-  </div>
+<div class="container">
+  <h2>TODAS AS POSTAGENS</h2>
+<div class=" Postagem2">
+            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>TITLO</th>
+        <th>CRIADO EM</th>
+        <th>CATEGORIA</th>
+        <th>STATUS</th>
+        <th>OPÇÕES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Classificados para Icarai Surf Festival.</td>
+        <td>30/05/2017</td>
+        <td>Surf</td>
+        <td>Publicado</td>
+        <td><span class="glyphicon glyphicon-trash"></span>     <span class="glyphicon glyphicon-edit"></span></td>
+      </tr>
+      <tr>
+        <td>Primeiro lugar isolado à espreita para os líderes do ranking
+</td>
+        <td>30/05/2017</td>
+        <td>surf</td>
+        <td>Publicado</td>
+        <td><span class="glyphicon glyphicon-trash"></span>     <span class="glyphicon glyphicon-edit"></span></td>
+      </tr>
+      
+    </tbody>
+  </table>
 </div>
+</div>
+
 
 <br>
 <br>
@@ -139,5 +151,5 @@ body{
    </div>
  </nav>
 
- </body>
- </html>
+</body>
+</html>
