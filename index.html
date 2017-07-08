@@ -11,6 +11,23 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <!--javascript-->
+  <script type="text/javascript">
+  $(document).ready(
+    function () {
+      $('input[name="bot1"]').click(
+        function () {
+          $('img').fadeOut('slow');
+          $("#img1").fadeIn("slow");          
+        });
+      $('input[name="bot2"]').click(
+        function () {
+          $('img').fadeOut('slow');
+          $("#img2").fadeIn("slow");
+        });
+    });
+    
+  </script>
 	<style type="text/css">
 		body{
 			background-color:  #33ccff;
@@ -106,6 +123,23 @@
   <br>
   <br>
   </div>
+  <!--fotos-->
+  <!-- <div class="container jumbotron text-center">
+  <h1> FOTOS </h1>
+  </div>
+<br>
+<br>
+<br>
+<input type="button" name="bot1" value="Anterior"/>
+<input type="button" name="bot2" value="Proximo"/>
+<img id="ima1" src="http://www.spiceuptheroad.com/wp-content/uploads/2016/07/surf-604x270.jpg" style="position: absolute;">
+<img id="img2" src="http://www.campechesurfschool.com.br/wp-content/uploads/2014/09/bg-aguarde.jpg" style="display: none;position: absolute;"> -->
+
+<br>
+<br>
+<br>
+
+<div class=" container jumbotron text-center" id="sobre">
 <!--o que fazemos-->
   <div class="container jumbotron text-center">
 	<h1> O QUE FAZEMOS? </h1>

@@ -3,6 +3,8 @@
 <head>
 	<title>Cadastro</title>
 	<meta charset="utf-8">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 	<!-- jQuery library -->
@@ -10,7 +12,10 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+	<!--javascript-->
+	<!--css-->
 	<style type="text/css">
+		
 		body{
 			background-color:  #33ccff;
 			color: black;
@@ -29,6 +34,10 @@
 		}
 		.texto-branco {
 			color: white;
+		}
+		#obgNome {
+			display: none;
+			color: red;
 		}
 	</style>
 	
@@ -54,34 +63,37 @@
  <br>
  <br>
  <br>
- </div>
+
 <div class="container">
   <div class="row">
   			
-  	<div class="col-md-4 col-md-offset-4 formulario Estilo">
-  			<h3>Prencha o forulário</h3>
-	  <form>
+  	<div class="col-md-4 col-md-offset-4 ">
+  		<h3>Preencha o formulário</h3>
+	  <form onsubmit="return verefica()">
 	    <div class="form-group">
-	      <label for="email" class="texto-branco">SEU NOME:</label>
+	      <label for="nome" class="texto-branco">SEU NOME:</label>
 	      <br>
-	      <input type="email" class="form-control" id="email" placeholder="Nome" name="email">
+	      <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" onblur="vereficanome(this)">
+	      <div id="obgNome">Campo obg</div>
 	    </div>
 	    <div class="form-group">
-	      <label for="pwd" class="texto-branco">SEU EMAIL:</label>
+	      <label for="email" class="texto-branco">SEU EMAIL:</label>
 	      <br>
-	      <input type="email" class="form-control" id="pwd" placeholder="E-mail" name="usr">
+	      <input type="text" class="form-control" id="email" placeholder="E-mail" name="email">
         <div class="form-group">
-        <label for="pwd" class="texto-branco">O ASSUNTO:</label>
-        <input type="email" class="form-control" id="pwd" placeholder="Assunto" name="usr"><br>
-        <textarea placeholder="SUA MENSAGEM"></textarea>
+        <label for="assunto" class="texto-branco">O ASSUNTO:</label>
+        <input type="text" class="form-control" id="assunto" placeholder="Assunto" name="assunto"><br>
+        <textarea placeholder="SUA MENSAGEM"></textarea><br><br><br>
+        <input type="submit" value="cadastrar" class="btn btn-primary btn-lg center-block">
         </div>
+        <div id="esconder">* campo obrigatorio</div>
         <br>
         
 
 	    </div>
 	
 	    <br>
-	   <a href="login.html"> <button type="button" class="btn btn-primary btn-lg center-block">Enviar</button></a>
+	   <!-- <a href="login.html"> <button type="button" class="btn btn-primary btn-lg center-block">Enviar</button></a> -->
 	  <br>
 	  <br>
 	  </form>
@@ -89,5 +101,15 @@
   </div>
 </div>
   	
+	<script type="text/javascript">
+		function vereficanome(elemento){
+			var valor = elemento.value;
+			if(valor.length == 0){
+				document.getElementById("#obgNome").style.display = "initial";
+				return false;
+			}
+		}
+			
+	</script>
 </body>
 </html>
